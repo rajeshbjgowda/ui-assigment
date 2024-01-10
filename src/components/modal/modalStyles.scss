@@ -1,3 +1,4 @@
+@import "../../assets/styles/colors";
 .modalContainer {
   position: absolute;
   display: flex;
@@ -14,7 +15,7 @@
 
   .children-container {
     position: relative;
-    background-color: white;
+    background-color:$white;
     border-radius: 6px;
     padding: 30px;
     max-height: 70vh;

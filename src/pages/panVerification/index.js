@@ -11,15 +11,18 @@ const PanVerification = () => {
   const [error, setError] = useState(false);
   const handleChange = (e) => {
     const value = e.target.value;
-    setPanNumber(value);
     if (value.length > 10) {
+      setPanNumber(value);
       setError(true);
     } else {
       setError(false);
     }
   };
   const handleClick = () => {
-    if (panNumber.length > 10) {
+    let regex = new RegExp(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/);
+    if (regex.test(panNumber.toUpperCase()) === true) {
+      setError(false);
+    } else {
       setError(true);
     }
   };
