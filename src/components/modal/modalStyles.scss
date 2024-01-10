@@ -1,0 +1,33 @@
+.modalContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+
+  .children-container {
+    position: relative;
+    background-color: white;
+    border-radius: 6px;
+    padding: 30px;
+    max-height: 70vh;
+    overflow-y: auto;
+    width: 50%;
+    .closeIcon {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
+    @media (max-width: 768px) {
+      width: unset;
+      max-height: 90vh;
+    }
+  }
+}

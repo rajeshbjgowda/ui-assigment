@@ -1,0 +1,105 @@
+@import "../../assets/styles/colors";
+
+.textFeild-wrapper{
+  width: 100%;
+.input-container {
+  position: relative;
+  .label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    color: $gray-50;
+
+    .text {
+      font-family: "Segoe UI";
+      font-size: 16px;
+      transition: all 0.15s ease-out;
+    }
+  }
+  input {
+    height: 48px;
+    width:100%;
+    border: 1px solid $gray-100;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $light-blue;
+
+      + .label .text {
+        font-size: 12px;
+        transform: translate(0, -150%);
+        background-color: white;
+        padding-left: 4px;
+        padding-right: 4px;
+        color: $light-blue;
+      }
+    }
+
+    &:not(input[value=""]){
+      border: 1px solid $light-blue;
+    + .label {
+      
+      .text {
+        font-size: 12px;
+        transform: translate(0, -150%);
+        background-color: white;
+        padding-left: 4px;
+        padding-right: 4px;
+        color: $light-blue;
+      }
+    }
+  }
+
+  &:not(input[value=""]){
+    border: 1px solid $light-blue;
+  + .label {
+    
+    .text {
+      font-size: 12px;
+      transform: translate(0, -150%);
+      background-color: white;
+      padding-left: 4px;
+      padding-right: 4px;
+      color: $light-blue;
+    }
+  }
+}
+
+
+
+ 
+  }
+ &.input-error{
+  border-color: $error-color !important;
+
+    .label .text {
+      color: $error-color !important;
+    }
+
+    input {
+      border-color: $error-color !important;
+
+      + .label .text {
+        color: $error-color !important;
+      }
+    }
+ }
+}
+.helperText {
+  text-align: right;
+  margin: 5px 0;
+  padding-right: 10px;
+  color: $gray-50;
+  font-size: 14px;
+}
+}
