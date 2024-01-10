@@ -27,7 +27,7 @@ export const BadgeIcon = () => {
   );
 };
 
-export const CloseIcon = ({ className }) => {
+export const CloseIcon = ({ className, onClick }) => {
   return (
     <svg
       width="14"
@@ -36,6 +36,7 @@ export const CloseIcon = ({ className }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      onClick={onClick}
     >
       <g id="Group">
         <g id="Group_2">

@@ -10,7 +10,7 @@
   z-index: 100;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: black;
   overflow: hidden;
 
   .children-container {
@@ -25,6 +25,7 @@
       position: absolute;
       top: 16px;
       right: 16px;
+      cursor: pointer;
     }
     @media (max-width: 768px) {
       width: unset;

@@ -12,10 +12,10 @@ const PanVerification = () => {
   const handleChange = (e) => {
     const value = e.target.value;
     if (value.length > 10) {
-      setPanNumber(value);
       setError(true);
     } else {
       setError(false);
+      setPanNumber(value);
     }
   };
   const handleClick = () => {
@@ -28,6 +28,15 @@ const PanVerification = () => {
   };
   return (
     <div className="container">
+      <div className="modal-btn-open">
+        <CustomButton
+          onClick={() => {
+            setVisible(true);
+          }}
+          label="Open Modal"
+          disabled={false}
+        />
+      </div>
       <Modal visible={visible} setVisible={setVisible}>
         <div className="pan-verification-container">
           <div className="modal-header">

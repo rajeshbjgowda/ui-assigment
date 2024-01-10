@@ -14,11 +14,14 @@ export default function Modal({ visible, setVisible, children }) {
             if (modalRef.current.contains(e.target)) {
               return;
             }
-            // setVisible(false);
+            setVisible(false);
           }}
         >
           <div className="children-container" ref={modalRef}>
-            <CloseIcon className="closeIcon" />
+            <CloseIcon
+              className="closeIcon"
+              onClick={() => setVisible(false)}
+            />
             {children}
           </div>
         </div>
